@@ -1,0 +1,32 @@
+﻿<Window x:Class="GreatBritain.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GreatBritain"
+        Icon="Resources/school_logo.ico"
+        mc:Ignorable="d"
+        Title="Компания ООО &quot;GreatBritain&quot;" Height="550" Width="1070" MinHeight="550" MinWidth="1070" WindowStartupLocation="CenterScreen">
+    <!-- главное окно приложения, на которое будет выводиться большинство страниц -->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="450*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Image Source="Resources/school_logo.png"/>
+            <TextBlock Width="350"
+                       TextWrapping="Wrap"
+                       VerticalAlignment="Center"
+                       Margin="15,0,0,0"
+                       Style="{StaticResource TxBigStyle}"
+                       Text="{Binding ElementName= FrmMain,
+                                      Path= Content.Title}"/>
+        </StackPanel>
+        <Frame Name="FrmMain"
+               Grid.Row="1"
+               NavigationUIVisibility ="Hidden"
+               Margin="10 0 10 0"
+               />
+    </Grid>
+</Window>

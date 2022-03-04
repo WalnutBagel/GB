@@ -1,0 +1,112 @@
+﻿<Page x:Class="GreatBritain.Pages.PageEditProduct"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GreatBritain.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="1050"
+      Title="Add/Edit Product">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300*"/>
+            <ColumnDefinition Width="450*"/>
+            <ColumnDefinition Width="300*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="350*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1" 
+                    Grid.Column="1" 
+                    VerticalAlignment="Center">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="30*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="175*"/>
+                    <ColumnDefinition Width="175*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="ID:"
+                           Grid.Row="0"
+                           HorizontalAlignment="Right"
+                           Style="{StaticResource TxDefaultStyle}"/>
+                <TextBlock Text="Name:"
+                           Grid.Row="1"
+                           HorizontalAlignment="Right"
+                           Style="{StaticResource TxDefaultStyle}"/>
+                <TextBlock Text="Cost:"
+                           Grid.Row="2"
+                           HorizontalAlignment="Right"
+                           Style="{StaticResource TxDefaultStyle}"/>
+                <TextBlock Text="Manufacturer:"
+                           Grid.Row="3"
+                           HorizontalAlignment="Right"
+                           Style="{StaticResource TxDefaultStyle}"/>
+                <TextBlock Text="Description:"
+                           Grid.Row="4"
+                           HorizontalAlignment="Right"
+                           Style="{StaticResource TxDefaultStyle}"/>
+                <TextBox Name="TbID"
+                         IsReadOnly="True"
+                         Width="150"
+                         HorizontalAlignment="Left"
+                         Margin="5 0 0 0"
+                         Style="{StaticResource TBDefaultStyle}"
+                         Grid.Column="1" Grid.Row="0"/>
+                <TextBox Name="TbName"
+                         Width="150"
+                         HorizontalAlignment="Left"
+                         Margin="5 0 0 0"
+                         Style="{StaticResource TBDefaultStyle}"
+                         Grid.Column="1" Grid.Row="1"/>
+                <TextBox Name="TbCost"
+                         Width="150"
+                         HorizontalAlignment="Left"
+                         Margin="5 0 0 0"
+                         Style="{StaticResource TBDefaultStyle}"
+                         Grid.Column="1" Grid.Row="2"/>
+                <TextBox Name="TbManufacturer"
+                         Width="150"
+                         HorizontalAlignment="Left"
+                         Margin="5 0 0 0"
+                         Style="{StaticResource TBDefaultStyle}"
+                         Grid.Column="1" Grid.Row="3"/>
+                <TextBox Name="TbDescription"
+                         Width="150"
+                         HorizontalAlignment="Left"
+                         Margin="5 0 0 0"
+                         Style="{StaticResource TBDefaultStyle}"
+                         Grid.Column="1" Grid.Row="4"/>
+                <Button Name="BtCancel"
+                        Grid.Column="0"
+                        Grid.Row="5"
+                        Margin="5"
+                        Width="100"
+                        Height="30"
+                        HorizontalAlignment="Right"
+                        Content="Cancel"
+                        Style="{StaticResource BtDefaultStyle}"
+                        Click="BtCancel_Click"/>
+                <Button Name="BtSave"
+                        Grid.Column="1"
+                        Grid.Row="5"
+                        Margin="5"
+                        Width="100"
+                        Height="30"
+                        HorizontalAlignment="Left"
+                        Content="Save"
+                        Style="{StaticResource BtDefaultStyle}"
+                        Click="BtSave_Click"/>
+
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Page>
